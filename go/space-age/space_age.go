@@ -19,7 +19,6 @@ var orbitalPeriods = map[Planet]float64{
 //Age will calculate how many given planet years is someone old,
 //based on the age given in seconds and planet name
 func Age(ageInSec float64, planet Planet) float64 {
-	var numOfYears float64
-	numOfYears = ageInSec / (orbitalPeriods[planet] * earthYearInSec)
+	numOfYears := ageInSec / (orbitalPeriods[planet] * earthYearInSec)
 	return numOfYears
 }
